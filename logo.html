@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Prodigious Logo</title>
+
+  <style>
+    @font-face {
+      font-family: 'Prodigious';
+      src: url('font.otf') format('opentype')
+    }
+
+    * {
+      transition: all 1s;
+    }
+
+    *:after {
+      transition: all 1s;
+    }
+
+    *:before {
+      transition: all 1s;
+    }
+
+    *:hover {
+      transition: all 1s;
+    }
+
+    sup {
+      font-size: 23px;
+      font-family: 'Arial';
+      font-weight: bold;
+      left: 1207px;
+      letter-spacing: 0.08em;
+      position: absolute;
+      top: 272px;
+      white-space: nowrap;
+    }
+
+    .arc {
+      bottom: 50%;
+      overflow: hidden;
+      position: absolute;
+      right: 50%;
+      transform-origin: 100% 100%;
+      transform: rotate(45deg) skewX(30deg);
+    }
+
+    .arc:before {
+      border-radius: 50%;
+      box-sizing: border-box;
+      content: '';
+      display: block;
+      height: 200%;
+      transform: skewX(-30deg);
+      width: 200%;
+    }
+
+    .ball {
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      height: 23px;
+      position: absolute;
+      width: 23px;
+    }
+
+    .ball.one {
+      left: 12px;
+      top: 42px;
+    }
+
+    .ball.two {
+      left: 11px;
+      top: 157px;
+    }
+
+    .ball.three {
+      left: 119px;
+      top: 193px;
+    }
+
+    .ball.four {
+      left: 187px;
+      top: 100px;
+    }
+
+    .ball.five {
+      left: 121px;
+      top: 6px;
+    }
+
+    .brand {
+      font-family: 'Prodigious';
+      font-size: 116px;
+      left: 603px;
+      letter-spacing: -0.006em;
+      position: absolute;
+      top: 238px;
+      white-space: nowrap;
+    }
+
+    .edge-container {
+      position: relative;
+    }
+
+    .edge {
+      border-radius: 50%;
+      margin: 7em auto;
+      height: 17em;
+      opacity: .8;
+      position: absolute;
+      width: 17em;
+    }
+
+    .edge:after {
+      border-radius: 50%;
+      content: "";
+      height: 52px;
+      left: 157px;
+      position: absolute;
+      top: -45px;
+      width: 52px;
+    }
+
+    .edge:before {
+      border-radius: 50%;
+      content: "";
+      height: 52px;
+      left: 44px;
+      position: absolute;
+      top: -38px;
+      width: 52px;
+    }
+
+    .edge > .arc {
+      top: -52px;
+      left: -52px;
+      transform: rotate(66.5deg) skewX(49deg);
+    }
+
+    .edge > .arc:before {
+      transform: skewX(-49deg);
+    }
+
+    .edge-blue {
+      transform: rotate(310deg);
+      top: 0;
+      left: 150px;
+    }
+
+    .edge-blue:after,
+    .edge-blue:before {
+      background-color: #00b6db;
+    }
+
+    .edge-blue > .arc:before {
+      border: solid 52px #00b6db;
+    }
+
+    .edge-green {
+      transform: rotate(238deg);
+      top: -270px;
+      left: 153px;
+    }
+
+    .edge-green:after,
+    .edge-green:before {
+      background-color: #83be49;
+    }
+
+    .edge-green > .arc:before {
+      border: solid 52px #83be49;
+    }
+
+    .edge-orange {
+      transform: rotate(166deg);
+      top: -356px;
+      left: -103px;
+    }
+
+    .edge-orange:after,
+    .edge-orange:before {
+      background-color: #f38730;
+    }
+
+    .edge-orange > .arc:before {
+      border: solid 52px #f38730;
+    }
+
+    .edge-purple {
+      transform: rotate(22deg);
+      top: 82px;
+      left: -107px;
+    }
+
+    .edge-purple:after,
+    .edge-purple:before {
+      background-color: #b2258c;
+    }
+
+    .logo:hover .ball.two {
+      background: rgba(0, 0, 0, .5);
+      transform: translateY(-1em) rotateX(46deg) rotateY(20deg) rotateZ(-20deg) translateX(10em);
+    }
+
+    .logo:hover .edge-purple:before {
+      transform: translateY(1em) rotateX(46deg) rotateY(20deg) rotateZ(-20deg) translateX(10em);
+    }
+
+    .logo:hover .edge-purple .arc {
+      transform: translateY(3em) rotateX(46deg) rotateY(20deg) rotateZ(-20deg) translateX(10em);
+    }
+
+    .logo:hover .edge-purple:after {
+      transform: translateY(5em) rotateX(46deg) rotateY(20deg) rotateZ(-20deg) translateX(10em);
+    }
+
+    .logo:hover .ball.three {
+      background: rgba(0, 0, 0, .5);
+      transform: translateY(7em) rotateX(46deg) rotateY(20deg) rotateZ(-20deg) translateX(10em);
+    }
+
+    .edge-purple > .arc:before {
+      border: solid 52px #b2258c;
+    }
+
+    .edge-red {
+      transform: rotate(94deg);
+      top: -138px;
+      left: -264px;
+    }
+
+    .edge-red:after,
+    .edge-red:before {
+      background-color: #ec3043;
+    }
+
+    .edge-red > .arc:before {
+      border: solid 52px #ec3043;
+    }
+
+    .logistics {
+      font-family: 'Prodigious';
+      font-size: 116px;
+      left: 874px;
+      letter-spacing: -0.01em;
+      position: absolute;
+      top: 238px;
+      white-space: nowrap;
+    }
+
+    .logo {
+      left: 20px;
+      position: absolute;
+      top: 20px;
+    }
+
+    .name {
+      font-family: 'Prodigious';
+      font-size: 243px;
+      left: 259px;
+      letter-spacing: -0.006em;
+      position: absolute;
+      top: 17px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="logo">
+      <div class="edge edge-blue">
+        <div class="arc">
+
+        </div>
+      </div>
+
+      <div class="edge edge-green">
+        <div class="arc">
+
+        </div>
+      </div>
+
+      <div class="edge edge-orange">
+        <div class="arc">
+
+        </div>
+      </div>
+
+      <div class="edge edge-red">
+        <div class="arc">
+
+        </div>
+      </div>
+
+      <div class="edge edge-purple">
+        <div class="arc"></div>
+      </div>
+
+      <div class="balls">
+        <div class="ball one"></div>
+
+        <div class="ball two"></div>
+
+        <div class="ball three"></div>
+
+        <div class="ball four"></div>
+
+        <div class="ball five"></div>
+      </div>
+
+    </div>
+
+    <div class="name">
+      Prodigious
+    </div>
+
+    <div class="slogan">
+      <span class="brand">brand</span>
+
+      <span class="logistics">logistics</span>
+
+      <sup>TM</sup>
+    </div>
+  </div>
+
